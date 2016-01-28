@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html lang="ru" class="lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html lang="ru" class="lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]><html lang="ru" class="lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ru">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8" />
+    <title>RezonansPOSapp</title>
+    <meta name="description" content="" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,600&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+
+
+    <script type="text/javascript">
+        document.write("<script src=http://" + window.location.hostname + ":35729/livereload.js> </" + "script>");
+    </script>
+
+
+    <script type="text/javascript">
+        window.onload = function () {
+            document.getElementById("numeric_keyboard").style.display = 'none';
+        }
+    </script>
+    <script type="text/javascript">
+        function keyboardType(a) {
+            var label = a.value;
+            if (label == 1) {
+                document.getElementById("keyboard").style.display = 'block';
+                document.getElementById("numeric_keyboard").style.display = 'none';
+            } else {
+                document.getElementById("keyboard").style.display = 'none';
+                document.getElementById("numeric_keyboard").style.display = 'block';
+            }
+        }
+    </script>
+
+
+    <body>
+
+
+        <div class="topbar">
+            <div class="logo">
+                <img src="img/logo.png" alt="Резонанс">
+            </div>
+            <div class="shift">
+                Зміна: <span>1234</span>
+            </div>
+            <div class="user">
+                Касир: <span>Иванова Ольга</span>
+            </div>
+            <div class="date">
+                <p>10:20</p>
+                10.01.2016
+            </div>
+        </div>
+
+        <div class="wrapper">
+            <div class="sidebar">
+                <ul class="menu">
+                    <li><a href="index.html"><span>c</span>Поточний чек</a></li>
+                    <li><a href="work_with_check.html"><span>e</span>Робота з чеком</a></li>
+                    <li><a href="documents.html"><span>d</span>Документи</a></li>
+                    <li><a href="cassa.html"><span>a</span>Каса</a></li>
+                    <li><a href="admin.html"><span>c</span>Службові</a></li>
+                    <li><a href="#"><span>b</span>Звіти</a></li>
+                </ul>
+                <div class="substrate"></div>
+            </div>
+            <div class="main_window">
+                <div class="top_buttons">
+                    <input type="button" class="handle_discount" value="Ручна знижка" onclick="location.href='handle_discount.html'">
+                    <input type="button" class="client_discount pressed " value="Пошук клієнта" onclick="location.href='discount.html'">
+                </div>
+                <div class="inputs">
+                    <span>Введіть:</span>
+                    <select id="search_type" onchange="keyboardType(this)">
+                        <option value="1" selected>Ім`я клієнта</option>
+                        <option value="2">Номер картки</option>
+                        <option value="3">Номер телефону</option>
+                    </select>
+                    <input type="text" id="search_area">
+                    <span>Клієнт:</span>
+                    <select id="search_results">
+                        <option>Іванов Іван (АТБмаркет) 5%</option>
+                        <option>Зеленский Геннадий (Резонанс) 77%</option>
+                    </select>
+
+                </div>
+                <div class="keyboard" id="keyboard">
+                    <div class="first_row">
+                        <input type="button" class="button-normal" value="й">
+                        <input type="button" class="button-normal" value="ц">
+                        <input type="button" class="button-normal" value="у">
+                        <input type="button" class="button-normal" value="к">
+                        <input type="button" class="button-normal" value="е">
+                        <input type="button" class="button-normal" value="н">
+                        <input type="button" class="button-normal" value="г">
+                        <input type="button" class="button-normal" value="ш">
+                        <input type="button" class="button-normal" value="щ">
+                        <input type="button" class="button-normal" value="з">
+                        <input type="button" class="button-normal" value="х">
+                        <input type="button" class="button-normal" value="ъ">
+                    </div>
+
+                    <div class="second_row">
+                        <input type="button" class="button-normal" value="ф">
+                        <input type="button" class="button-normal" value="ы">
+                        <input type="button" class="button-normal" value="в">
+                        <input type="button" class="button-normal" value="а">
+                        <input type="button" class="button-normal" value="п">
+                        <input type="button" class="button-normal" value="р">
+                        <input type="button" class="button-normal" value="о">
+                        <input type="button" class="button-normal" value="л">
+                        <input type="button" class="button-normal" value="д">
+                        <input type="button" class="button-normal" value="ж">
+                        <input type="button" class="button-normal" value="э">
+                    </div>
+                    <div class="third_row">
+                        <input type="button" class="button-normal lang" value="eng ">
+                        <input type="button" class="button-normal" value="я">
+                        <input type="button" class="button-normal" value="ч">
+                        <input type="button" class="button-normal" value="с">
+                        <input type="button" class="button-normal" value="м">
+                        <input type="button" class="button-normal" value="и">
+                        <input type="button" class="button-normal" value="т">
+                        <input type="button" class="button-normal" value="ь">
+                        <input type="button" class="button-normal" value="б">
+                        <input type="button" class="button-normal" value="ю">
+                        <input type="button" class="button-normal" value="(">
+                        <input type="button" class="button-normal" value=")">
+                    </div>
+                    <div class="fourth_row">
+                        <input type="button" class="button-normal" value="123./*">
+                        <input type="button" class="button-normal caps-button" value="Caps Lock">
+                        <input type="button" class="button-normal dash-button" value=" ">
+                        <input type="button" class="button-normal del-button" value="o ">
+                    </div>
+                </div>
+                <div class="numeric_keyboard" id="numeric_keyboard">
+                    <input type="button" class="button-normal" value="1">
+                    <input type="button" class="button-normal" value="2">
+                    <input type="button" class="button-normal" value="3">
+                    <input type="button" class="button-normal" value="h">
+                    <input type="button" class="button-normal" value="4">
+                    <input type="button" class="button-normal" value="5">
+                    <input type="button" class="button-normal" value="6">
+                    <input type="button" class="button-normal" value="g">
+                    <input type="button" class="button-normal" value="7">
+                    <input type="button" class="button-normal" value="8">
+                    <input type="button" class="button-normal" value="9">
+                    <input type="button" class="button-normal" value="0">
+                    <input type="button" class="button-normal" value=".">
+                    <input type="button" class="button-normal" value="o">
+
+                </div>
+                <div class="main_buttons">
+                    <input type="button" class="del-discount" value="Видалити знижки">
+                    <input type="button" class="accept-discount" value="Прийняти знижку">
+                </div>
+            </div>
+
+
+        </div>
+
+
+    </body>
+
+</html>

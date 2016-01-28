@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html lang="ru" class="lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html lang="ru" class="lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]><html lang="ru" class="lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!-->
+<!DOCTYPE html PUBLIC"-//W3C//DTD XHTML 1.0 Transitional//EN""http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ru">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8" />
+    <title>RezonansPOSapp</title>
+    <meta name="description" content="" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,600&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    <script src="jquery-2.2.0.js"></script>
+
+
+
+    <script type="text/javascript">
+        document.write("<script src=http://" + window.location.hostname + ":35729/livereload.js> </" + "script>");
+    </script>
+
+
+    <body>
+
+        <div class=" topbar">
+            <div class="logo">
+                <img src="img/logo.png" alt="Резонанс">
+            </div>
+            <div class="shift">
+                Зміна: <span>1234</span>
+            </div>
+            <div class="user">
+                Касир: <span>Иванова Ольга</span>
+            </div>
+            <div class="date">
+                <p>10:20</p>
+                10.01.2016
+            </div>
+        </div>
+
+        <div class="wrapper">
+            <div class="sidebar">
+                <ul class="menu">
+                    <li><a href="index.html"><span>c</span>Поточний чек</a></li>
+                    <li>
+                        <a href="work_with_check.html"><span>e</span>Робота з чеком</a></a>
+                    </li>
+                    <li><a href="documents.html"><span>d</span>Документи</a></li>
+                    <li><a href="cassa.html"><span>a</span>Каса</a></li>
+                    <li><a href="admin.html"><span>c</span>Службові</a></li>
+                    <li><a href="#"><span>b</span>Звіти</a></li>
+                </ul>
+                <div class="substrate"></div>
+            </div>
+            <div class="main_window">
+                <div class="payment_info">
+                    <p>До сплати: <span>0.00</span></p>
+                    <p>Всього внесено: <span>0.00</span></p>
+                    <p>Необхідно внести: <span>0.00</span></p>
+                </div>
+                <div class="payment_controls">
+                    <div class="payment_type">
+                        <input type="radio" id="cash" name="payment_type" tabindex="1" checked onkeydown="keyJump(event,this)" />
+                        <label for="cash">Готівка</label>
+                        <input type="radio" id="bank" name="payment_type" tabindex="2" onkeydown="keyJump(event,this)" />
+                        <label for="bank">Банківський рахунок</label>
+                        <input type="radio" id="card" name="payment_type" tabindex="3" />
+                        <label for="card">Картка</label>
+                        <input type="radio" id="other" name="payment_type" tabindex="4" />
+                        <label for="other">Інше</label>
+                    </div>
+
+                    <div class="payment_value">
+                        <input type="radio" id="1sum" name="payment_value" />
+                        <label for="1sum">0.00</label>
+                        <input type="radio" id="2sum" name="payment_value" />
+                        <label for="2sum">0.00</label>
+                        <input type="radio" id="3sum" name="payment_value" />
+                        <label for="3sum">0.00</label>
+                        <input type="radio" id="4sum" name="payment_value" />
+                        <label for="4sum">0.00</label>
+                    </div>
+
+                    <div class="payment_inputs">
+                        <input type="text" value="">
+
+
+                        <input type="button" class="button-normal" value="1">
+                        <input type="button" class="button-normal" value="2">
+                        <input type="button" class="button-normal" value="3">
+                        <input type="button" class="button-normal" value="o">
+
+                        <input type="button" class="button-normal" value="4">
+                        <input type="button" class="button-normal" value="5">
+                        <input type="button" class="button-normal" value="6">
+                        <input type="button" class="button-normal" value="k">
+
+                        <input type="button" class="button-normal" value="7">
+                        <input type="button" class="button-normal" value="8">
+                        <input type="button" class="button-normal" value="9">
+                        <input type="button" class="button-normal" value="Внести">
+
+                        <input type="button" class="button-normal" value=".">
+                        <input type="button" class="button-normal" value="0">
+                        <input type="button" class="button-normal" value="00">
+
+                    </div>
+                    <input class="button-cancel" type="button" value="Відмінити" onclick="history.back()">
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+    </body>
+
+</html>
