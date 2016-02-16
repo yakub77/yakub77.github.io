@@ -24,9 +24,10 @@
     </script>
 
 
+
     <body>
 
-        <div class=" topbar">
+        <div class="topbar">
             <div class="logo">
                 <img src="img/logo.png" alt="Резонанс">
             </div>
@@ -44,78 +45,155 @@
 
         <div class="wrapper">
             <div class="sidebar">
-                <ul class="menu">
-                    <li><a href="index.html"><span>c</span>Поточний чек</a></li>
-                    <li>
-                        <a href="work_with_check.html"><span>e</span>Робота з чеком</a></a>
-                    </li>
-                    <li><a href="documents.html"><span>d</span>Документи</a></li>
-                    <li><a href="cassa.html"><span>a</span>Каса</a></li>
-                    <li><a href="admin.html"><span>c</span>Службові</a></li>
-                    <li><a href="#"><span>b</span>Звіти</a></li>
-                </ul>
+                <div class="menu">
+                    <button class="menu_btn" onclick="location.href='index.html' "><span>c</span>
+                        <br>Поточний
+                        <br>чек</button>
+                    <button class="menu_btn" onclick="location.href='work_with_check.html' "><span>e</span>
+                        <br>Робота
+                        <br>з чеком</button>
+                    <button class="menu_btn" onclick="location.href='documents.html' "><span>d</span>
+                        <br>Документи</button>
+                    <button class="menu_btn" onclick="location.href='cassa.html' "><span>a</span>
+                        <br>Каса</button>
+                    <button class="menu_btn" onclick="location.href='admin.html' "><span>c</span>
+                        <br>Службові
+                    </button>
+                    <button class="menu_btn" onclick="location.href='#' "><span>b</span>
+                        <br>Звіти</button>
+                </div>
                 <div class="substrate"></div>
             </div>
-            <div class="main_window">
-                <div class="payment_info">
-                    <p>До сплати: <span>0.00</span></p>
-                    <p>Всього внесено: <span>0.00</span></p>
-                    <p>Необхідно внести: <span>0.00</span></p>
+            <div class="main">
+                <div class="leftside">
+                    <div class="payment_info">
+                        <p>До сплати: <span>0.00</span></p>
+                        <p>Всього внесено: <span>0.00</span></p>
+                        <p>Необхідно внести: <span>0.00</span></p>
+                    </div>
+                    <div class="payment_controls">
+                        <div class="payment_type">
+                            <input type="radio" id="cash" name="payment_type" tabindex="1" checked onkeydown="keyJump(event,this)" />
+                            <label for="cash">Готівка</label>
+                            <input type="radio" id="bank" name="payment_type" tabindex="2" onkeydown="keyJump(event,this)" />
+                            <label for="bank">Банківський рахунок</label>
+                            <input type="radio" id="card" name="payment_type" tabindex="3" />
+                            <label for="card">Картка</label>
+                            <input type="radio" id="other" name="payment_type" tabindex="4" />
+                            <label for="other">Інше</label>
+                        </div>
+
+                        <div class="payment_value">
+                            <input type="radio" id="1sum" name="payment_value" />
+                            <label for="1sum">0.00</label>
+                            <input type="radio" id="2sum" name="payment_value" />
+                            <label for="2sum">0.00</label>
+                            <input type="radio" id="3sum" name="payment_value" />
+                            <label for="3sum">0.00</label>
+                            <input type="radio" id="4sum" name="payment_value" />
+                            <label for="4sum">0.00</label>
+                        </div>
+
+
+                        <input class=" btn_shape btn_normal button-cancel" type="button" value="Відмінити" onclick="history.back()">
+                    </div>
                 </div>
-                <div class="payment_controls">
-                    <div class="payment_type">
-                        <input type="radio" id="cash" name="payment_type" tabindex="1" checked onkeydown="keyJump(event,this)" />
-                        <label for="cash">Готівка</label>
-                        <input type="radio" id="bank" name="payment_type" tabindex="2" onkeydown="keyJump(event,this)" />
-                        <label for="bank">Банківський рахунок</label>
-                        <input type="radio" id="card" name="payment_type" tabindex="3" />
-                        <label for="card">Картка</label>
-                        <input type="radio" id="other" name="payment_type" tabindex="4" />
-                        <label for="other">Інше</label>
+
+                <div class="rightside ">
+                    <table class="weight">
+                        <tr>
+                            <td>Наіменування</td>
+                            <td>Крупа манна</td>
+                        </tr>
+                        <tr>
+                            <td>Вага</td>
+                            <td>0.840 кг</td>
+                        </tr>
+                        <tr>
+                            <td>Ціна</td>
+                            <td>37.00 грн.</td>
+                        </tr>
+                        <tr>
+                            <td>Вартість</td>
+                            <td>30.00 грн.</td>
+                        </tr>
+                    </table>
+                    <div class="calculator ">
+                        <label for="input-number ">Введіть код товару</label>
+                        <input type="text" class="btn_shape btn_calc" id="input-number">
+                        <div class="buttons">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <input class="btn_shape btn_calc btn_red" type="button" value="C">
+                                    </td>
+                                    <td>
+                                        <input class="btn_shape btn_calc" type="button" value="1">
+                                    </td>
+                                    <td>
+                                        <input class="btn_shape btn_calc" type="button" value="2">
+                                    </td>
+                                    <td>
+                                        <input class="btn_shape btn_calc" type="button" value="3">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="2">
+                                        <input type="checkbox" id="discount_perc" value="true" name="discount_buttons" disabled>
+                                        <label class="btn_shape btn_calc" for="discount_perc">
+                                            <p>%</p>Знижка</label>
+                                    </td>
+                                    <td>
+                                        <input class="btn_shape btn_calc" type="button" value="4">
+                                    </td>
+                                    <td>
+                                        <input class="btn_shape btn_calc" type="button" value="5">
+                                    </td>
+                                    <td>
+                                        <input class="btn_shape btn_calc" type="button" value="6">
+                                    </td>
+                                </tr>
+                                <tr>
+
+                                    <td>
+                                        <input class="btn_shape btn_calc" type="button" value="7">
+                                    </td>
+                                    <td>
+                                        <input class="btn_shape btn_calc" type="button" value="8">
+                                    </td>
+                                    <td>
+                                        <input class="btn_shape btn_calc" type="button" value="9">
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td rowspan="2">
+                                        <input type="checkbox" id="discount_grn" value="false" name="discount_buttons" disabled>
+                                        <label class="btn_shape btn_calc" for="discount_grn">
+                                            <p>ГРН</p>Знижка</label>
+                                    </td>
+                                    <td>
+                                        <input class="btn_shape btn_calc" type="button" value="0">
+                                    </td>
+                                    <td>
+                                        <input class="btn_shape btn_calc" type="button" value=".">
+                                    </td>
+                                    <td>
+                                        <input class="btn_shape btn_calc btn_icons" type="button" value="o">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3">
+                                        <input class="btn_shape btn_wide btn_calc" type="button" value="Внести">
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
                     </div>
-
-                    <div class="payment_value">
-                        <input type="radio" id="1sum" name="payment_value" />
-                        <label for="1sum">0.00</label>
-                        <input type="radio" id="2sum" name="payment_value" />
-                        <label for="2sum">0.00</label>
-                        <input type="radio" id="3sum" name="payment_value" />
-                        <label for="3sum">0.00</label>
-                        <input type="radio" id="4sum" name="payment_value" />
-                        <label for="4sum">0.00</label>
-                    </div>
-
-                    <div class="payment_inputs">
-                        <input type="text" value="">
-
-
-                        <input type="button" class="button-normal" value="1">
-                        <input type="button" class="button-normal" value="2">
-                        <input type="button" class="button-normal" value="3">
-                        <input type="button" class="button-normal" value="o">
-
-                        <input type="button" class="button-normal" value="4">
-                        <input type="button" class="button-normal" value="5">
-                        <input type="button" class="button-normal" value="6">
-                        <input type="button" class="button-normal" value="k">
-
-                        <input type="button" class="button-normal" value="7">
-                        <input type="button" class="button-normal" value="8">
-                        <input type="button" class="button-normal" value="9">
-                        <input type="button" class="button-normal" value="Внести">
-
-                        <input type="button" class="button-normal" value=".">
-                        <input type="button" class="button-normal" value="0">
-                        <input type="button" class="button-normal" value="00">
-
-                    </div>
-                    <input class="button-cancel" type="button" value="Відмінити" onclick="history.back()">
                 </div>
+
 
             </div>
-
-
-        </div>
 
 
     </body>

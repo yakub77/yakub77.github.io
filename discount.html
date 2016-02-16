@@ -62,106 +62,152 @@
 
         <div class="wrapper">
             <div class="sidebar">
-                <ul class="menu">
-                    <li><a href="index.html"><span>c</span>Поточний чек</a></li>
-                    <li><a href="work_with_check.html"><span>e</span>Робота з чеком</a></li>
-                    <li><a href="documents.html"><span>d</span>Документи</a></li>
-                    <li><a href="cassa.html"><span>a</span>Каса</a></li>
-                    <li><a href="admin.html"><span>c</span>Службові</a></li>
-                    <li><a href="#"><span>b</span>Звіти</a></li>
-                </ul>
+                <div class="menu">
+                    <button class="menu_btn" onclick="location.href='index.html' "><span>c</span>
+                        <br>Поточний чек</button>
+                    <button class="menu_btn" onclick="location.href='work_with_check.html' "><span>e</span>
+                        <br>Робота з чеком</button>
+                    <button class="menu_btn" onclick="location.href='documents.html' "><span>d</span>
+                        <br>Документи</button>
+                    <button class="menu_btn" onclick="location.href='cassa.html' "><span>a</span>
+                        <br>Каса</button>
+                    <button class="menu_btn" onclick="location.href='admin.html' "><span>c</span>
+                        <br>Службові
+                    </button>
+                    <button class="menu_btn" onclick="location.href='#' "><span>b</span>
+                        <br>Звіти</button>
+                </div>
                 <div class="substrate"></div>
             </div>
-            <div class="main_window">
+            <div class="main">
                 <div class="top_buttons">
-                    <input type="button" class="handle_discount" value="Ручна знижка" onclick="location.href='handle_discount.html'">
-                    <input type="button" class="client_discount pressed " value="Пошук клієнта" onclick="location.href='discount.html'">
-                </div>
-                <div class="inputs">
-                    <span>Введіть:</span>
-                    <select id="search_type" onchange="keyboardType(this)">
-                        <option value="1" selected>Ім`я клієнта</option>
-                        <option value="2">Номер картки</option>
-                        <option value="3">Номер телефону</option>
-                    </select>
-                    <input type="text" id="search_area">
-                    <span>Клієнт:</span>
-                    <select id="search_results">
-                        <option>Іванов Іван (АТБмаркет) 5%</option>
-                        <option>Зеленский Геннадий (Резонанс) 77%</option>
-                    </select>
+                    <input type="button" class="btn_shape handle_discount btn_shape" value="Ручна знижка" onclick="location.href='handle_discount.html'">
+                    <input type="button" class="pressed client_discount btn_shape" value="Пошук клієнта" onclick="location.href='discount.html'">
+                    <div class="inputs">
+                        <span>Введіть:</span>
+                        <select class="btn_shape" id="search_type" onchange="keyboardType(this)">
+                            <option value="1" selected>Ім`я клієнта</option>
+                            <option value="2">Номер картки</option>
+                            <option value="3">Номер телефону</option>
+                        </select>
+                        <input class="btn_shape" type="text" id="search_area">
+                        <span><br>Клієнт:</span>
+                        <select class="btn_shape" id="search_results">
+                            <option>Іванов Іван (АТБмаркет) 5%</option>
+                            <option>Зеленский Геннадий (Резонанс) 77%</option>
+                        </select>
+                    </div>
 
                 </div>
                 <div class="keyboard" id="keyboard">
                     <div class="first_row">
-                        <input type="button" class="button-normal" value="й">
-                        <input type="button" class="button-normal" value="ц">
-                        <input type="button" class="button-normal" value="у">
-                        <input type="button" class="button-normal" value="к">
-                        <input type="button" class="button-normal" value="е">
-                        <input type="button" class="button-normal" value="н">
-                        <input type="button" class="button-normal" value="г">
-                        <input type="button" class="button-normal" value="ш">
-                        <input type="button" class="button-normal" value="щ">
-                        <input type="button" class="button-normal" value="з">
-                        <input type="button" class="button-normal" value="х">
-                        <input type="button" class="button-normal" value="ъ">
+                        <input type="button" class="btn_shape btn_normal" value="й">
+                        <input type="button" class="btn_shape btn_normal" value="ц">
+                        <input type="button" class="btn_shape btn_normal" value="у">
+                        <input type="button" class="btn_shape btn_normal" value="к">
+                        <input type="button" class="btn_shape btn_normal" value="е">
+                        <input type="button" class="btn_shape btn_normal" value="н">
+                        <input type="button" class="btn_shape btn_normal" value="г">
+                        <input type="button" class="btn_shape btn_normal" value="ш">
+                        <input type="button" class="btn_shape btn_normal" value="щ">
+                        <input type="button" class="btn_shape btn_normal" value="з">
+                        <input type="button" class="btn_shape btn_normal" value="х">
+                        <input type="button" class="btn_shape btn_normal" value="ъ">
                     </div>
 
                     <div class="second_row">
-                        <input type="button" class="button-normal" value="ф">
-                        <input type="button" class="button-normal" value="ы">
-                        <input type="button" class="button-normal" value="в">
-                        <input type="button" class="button-normal" value="а">
-                        <input type="button" class="button-normal" value="п">
-                        <input type="button" class="button-normal" value="р">
-                        <input type="button" class="button-normal" value="о">
-                        <input type="button" class="button-normal" value="л">
-                        <input type="button" class="button-normal" value="д">
-                        <input type="button" class="button-normal" value="ж">
-                        <input type="button" class="button-normal" value="э">
+                        <input type="button" class="btn_shape btn_normal" value="ф">
+                        <input type="button" class="btn_shape btn_normal" value="ы">
+                        <input type="button" class="btn_shape btn_normal" value="в">
+                        <input type="button" class="btn_shape btn_normal" value="а">
+                        <input type="button" class="btn_shape btn_normal" value="п">
+                        <input type="button" class="btn_shape btn_normal" value="р">
+                        <input type="button" class="btn_shape btn_normal" value="о">
+                        <input type="button" class="btn_shape btn_normal" value="л">
+                        <input type="button" class="btn_shape btn_normal" value="д">
+                        <input type="button" class="btn_shape btn_normal" value="ж">
+                        <input type="button" class="btn_shape btn_normal" value="э">
                     </div>
                     <div class="third_row">
-                        <input type="button" class="button-normal lang" value="eng ">
-                        <input type="button" class="button-normal" value="я">
-                        <input type="button" class="button-normal" value="ч">
-                        <input type="button" class="button-normal" value="с">
-                        <input type="button" class="button-normal" value="м">
-                        <input type="button" class="button-normal" value="и">
-                        <input type="button" class="button-normal" value="т">
-                        <input type="button" class="button-normal" value="ь">
-                        <input type="button" class="button-normal" value="б">
-                        <input type="button" class="button-normal" value="ю">
-                        <input type="button" class="button-normal" value="(">
-                        <input type="button" class="button-normal" value=")">
+                        <input type="button" class="btn_shape btn_normal" value="eng">
+                        <input type="button" class="btn_shape btn_normal" value="я">
+                        <input type="button" class="btn_shape btn_normal" value="ч">
+                        <input type="button" class="btn_shape btn_normal" value="с">
+                        <input type="button" class="btn_shape btn_normal" value="м">
+                        <input type="button" class="btn_shape btn_normal" value="и">
+                        <input type="button" class="btn_shape btn_normal" value="т">
+                        <input type="button" class="btn_shape btn_normal" value="ь">
+                        <input type="button" class="btn_shape btn_normal" value="б">
+                        <input type="button" class="btn_shape btn_normal" value="ю">
+                        <input type="button" class="btn_shape btn_normal" value="(">
+                        <input type="button" class="btn_shape btn_normal" value=")">
                     </div>
                     <div class="fourth_row">
-                        <input type="button" class="button-normal" value="123./*">
-                        <input type="button" class="button-normal caps-button" value="Caps Lock">
-                        <input type="button" class="button-normal dash-button" value=" ">
-                        <input type="button" class="button-normal del-button" value="o ">
+                        <input type="button" class="btn_shape btn_normal" value="123./*">
+                        <input type="button" class="btn_ch btn_shape btn_normal" value="Caps Lock">
+                        <input type="button" class="btn_shape btn_normal btn_dash" value=" ">
+                        <input type="button" class="btn_ch btn_shape btn_normal btn_icons" value="o ">
                     </div>
                 </div>
-                <div class="numeric_keyboard" id="numeric_keyboard">
-                    <input type="button" class="button-normal" value="1">
-                    <input type="button" class="button-normal" value="2">
-                    <input type="button" class="button-normal" value="3">
-                    <input type="button" class="button-normal" value="h">
-                    <input type="button" class="button-normal" value="4">
-                    <input type="button" class="button-normal" value="5">
-                    <input type="button" class="button-normal" value="6">
-                    <input type="button" class="button-normal" value="g">
-                    <input type="button" class="button-normal" value="7">
-                    <input type="button" class="button-normal" value="8">
-                    <input type="button" class="button-normal" value="9">
-                    <input type="button" class="button-normal" value="0">
-                    <input type="button" class="button-normal" value=".">
-                    <input type="button" class="button-normal" value="o">
 
-                </div>
+
+                <table class="numeric_keyboard" id="numeric_keyboard">
+                    <div class="buttons"></div>
+                    <tr>
+                        <td>
+                            <input type="button" class="btn_shape btn_normal" value="1">
+                        </td>
+                        <td>
+                            <input type="button" class="btn_shape btn_normal" value="2">
+                        </td>
+                        <td>
+                            <input type="button" class="btn_shape btn_normal" value="3">
+                        </td>
+                        <td rowspan="2">
+                            <input type="button" class="btn_shape btn_normal btn_icons" value="h">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="button" class="btn_shape btn_normal" value="4">
+                        </td>
+                        <td>
+                            <input type="button" class="btn_shape btn_normal" value="5">
+                        </td>
+                        <td>
+                            <input type="button" class="btn_shape btn_normal" value="6">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="button" class="btn_shape btn_normal" value="7">
+                        </td>
+                        <td>
+                            <input type="button" class="btn_shape btn_normal" value="8">
+                        </td>
+                        <td>
+                            <input type="button" class="btn_shape btn_normal" value="9">
+                        </td>
+                        <td rowspan="2">
+                            <input type="button" class="btn_shape btn_normal btn_icons" value="g">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="button" class="btn_shape btn_normal" value="0">
+                        </td>
+                        <td>
+                            <input type="button" class="btn_shape btn_normal" value=".">
+                        </td>
+                        <td>
+                            <input type="button" class="btn_shape btn_normal btn_icons" value="o">
+                        </td>
+                    </tr>
+                </table>
+
                 <div class="main_buttons">
-                    <input type="button" class="del-discount" value="Видалити знижки">
-                    <input type="button" class="accept-discount" value="Прийняти знижку">
+                    <input type="button" class="btn_shape del-discount" value="Видалити знижки">
+                    <input type="button" class="btn_shape accept-discount" value="Прийняти знижку">
                 </div>
             </div>
 

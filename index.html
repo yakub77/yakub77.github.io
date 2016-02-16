@@ -14,14 +14,50 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="minimal-ui, width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <link rel="stylesheet" href="main.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#calc-toggle').on('click', function () {
+                $('#rs').toggleClass('open');
+                $('#dark').css({
+                    "visibility": "visible"
+                });
+            });
+            $('#c').on('click', function () {
+                $('#rs').toggleClass('open');
+                $('#dark').css({
+                    "visibility": "hidden"
+                });
+            });
+            $('#ok').on('click', function () {
+                $('#rs').toggleClass('open');
+                $('#dark').css({
+                    "visibility": "hidden"
+                });
+            });
+            $('.bill tr').on('click', function () {
+                $('#rs').toggleClass('open');
+                $('#dark').css({
+                    "visibility": "visible"
+                });
+            });
+            $('#dark').on('click', function () {
+                $('#rs').toggleClass('open');
+                $('#dark').css({
+                    "visibility": "hidden"
+                });
+            });
+
+        });
+    </script>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,600&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
 
 
 </head>
 
-
-
 <body>
+
+
 
     <div class="topbar">
         <div class="logo">
@@ -41,20 +77,30 @@
 
     <div class="wrapper">
         <div class="sidebar">
-            <ul class="menu">
-                <li><a href="index.html" class="active"><span>c</span>Поточний чек</a></li>
-                <li><a href="work_with_check.html"><span>e</span>Робота з чеком</a></li>
-                <li><a href="documents.html"><span>d</span>Документи</a></li>
-                <li><a href="cassa.html"><span>a</span>Каса</a></li>
-                <li><a href="admin.html"><span>c</span>Службові</a></li>
-                <li><a href="№"><span>b</span>Звіти</a></li>
-            </ul>
+            <div class="menu">
+                <div class="active">
+                    <button class="menu_btn" onclick="location.href='index.html' "><span>c</span>
+                        <br>Поточний чек</button>
+                </div>
+
+                <button class="menu_btn" onclick="location.href='work_with_check.html' "><span>e</span>
+                    <br>Робота з чеком</button>
+                <button class="menu_btn" onclick="location.href='documents.html' "><span>d</span>
+                    <br>Документи</button>
+                <button class="menu_btn" onclick="location.href='cassa.html' ">
+                    <span>a</span>
+                    <br>Каса</button>
+                <button class="menu_btn" onclick="location.href='admin.html' "><span>c</span>
+                    <br>Службові</button>
+                <button class="menu_btn" onclick="location.href='#' ">
+                    <span>b</span>
+                    <br>Звіти</button>
+            </div>
             <div class="substrate"></div>
         </div>
-
-        <div class="leftside">
-            <div class="bill">
-                <table>
+        <div class="main">
+            <div id="ls" class="leftside">
+                <table class="bill">
                     <tr>
                         <th></th>
                         <th>Найменування</th>
@@ -65,7 +111,7 @@
                     </tr>
                     <tr class="product_1">
                         <td>
-                            <input type="checkbox">
+                            <input type="checkbox" class="check">
                         </td>
                         <td>
                             <p class="product_name">Молоко "Простоквашино", 1л</p>
@@ -223,119 +269,48 @@
                             <p class="product_discount"></p>
                         </td>
                     </tr>
-                    <tr class="product_9">
-                        <td>
-
-                        </td>
-                        <td>
-                            <p class="product_name"></p>
-                        </td>
-                        <td>
-                            <p class="product_amount"></p>
-                        </td>
-                        <td>
-                            <p class="product_price"></p>
-                        </td>
-                        <td>
-                            <p class="product_cost"></p>
-                        </td>
-                        <td>
-                            <p class="product_discount"></p>
-                        </td>
-                    </tr>
-                    <tr class="product_high">
-                        <td>
-
-                        </td>
-                        <td>
-                            <p class="product_name"></p>
-                        </td>
-                        <td>
-                            <p class="product_amount"></p>
-                        </td>
-                        <td>
-                            <p class="product_price"></p>
-                        </td>
-                        <td>
-                            <p class="product_cost"></p>
-                        </td>
-                        <td>
-                            <p class="product_discount"></p>
-                        </td>
-                    </tr>
-                    <tr class="product_high">
-                        <td>
-
-                        </td>
-                        <td>
-                            <p class="product_name"></p>
-                        </td>
-                        <td>
-                            <p class="product_amount"></p>
-                        </td>
-                        <td>
-                            <p class="product_price"></p>
-                        </td>
-                        <td>
-                            <p class="product_cost"></p>
-                        </td>
-                        <td>
-                            <p class="product_discount"></p>
-                        </td>
-                    </tr>
-
 
                 </table>
-            </div>
-            <div class="control_panel">
-                <div class="control_buttons">
-
-                    <form name="input" method="post" action="#">
+                <div class="control_panel">
+                    <div class="control_buttons">
                         <div class="nav_btn">
-                            <input class="button-normal" type="button" value="j">
-                            <input class="button-normal" type="button" value="i">
-
+                            <input class="btn_shape btn_normal btn_icons" type="button" value="j">
+                            <input class="btn_shape btn_normal btn_icons" type="button" value="i">
                         </div>
                         <div class="bottom_btn ">
-                            <input class="button-normal" type="button" value="m" onclick="location.href='view.html'" id="fs ">
-                            <input class="button-normal" type="button" value="n" onclick="location.href='info.html' ">
-                            <input class="button-normal" type="button" value="p" onclick="location.href='discount.html' ">
-                            <input class="button-normal" type="button" value="k">
+                            <input class="btn_shape btn_normal btn_icons" type="button" value="m" onclick="location.href='view.html'">
+                            <input class="btn_shape btn_normal btn_icons" type="button" value="n" onclick="location.href='info.html' ">
+                            <input class="btn_shape btn_normal btn_icons" type="button" value="p" onclick="location.href='discount.html' ">
+                            <input class="btn_shape btn_normal btn_icons btn_red" type="button" value="k">
                             <div class="search_buttons ">
                                 <fieldset>
                                     <legend>Пошук</legend>
-                                    <input class="button-normal" type="button" value="l" onclick="location.href='search.html' ">
-                                    <input class="button-normal" type="button" value="q" onclick="location.href='catalog.html' ">
+                                    <input class="btn_shape btn_normal btn_icons" type="button" value="l" onclick="location.href='search.html' ">
+                                    <input class="btn_shape btn_normal btn_icons" type="button" value="q" onclick="location.href='catalog.html' ">
                                 </fieldset>
                             </div>
+                            <input class="btn_shape btn_normal btn_icons " type="button" id="calc-toggle" value="t">
 
+                            <div id="dark"></div>
                         </div>
-
-                    </form>
-
-                </div>
-                <div class="summ ">
-                    <table>
-                        <tr>
-                            <td>Сума:</td>
-                            <td>123.45</td>
-                        </tr>
-                        <tr>
-                            <td>Знижка:</td>
-                            <td>12.57</td>
-                        </tr>
-                    </table>
-                    <input class="button-pay" type="button" value="Оплата" onclick="location.href='payment.html' ">
+                    </div>
+                    <div class="summ">
+                        <table>
+                            <tr>
+                                <td>Сума:</td>
+                                <td>123.45</td>
+                            </tr>
+                            <tr>
+                                <td>Знижка:</td>
+                                <td>12.57</td>
+                            </tr>
+                        </table>
+                        <input class="btn_green btn_shape btn-pay" type="button" value="Оплата" onclick="location.href='payment.html' ">
+                    </div>
                 </div>
             </div>
-
-
-
-
-        </div>
-        <div class="rightside ">
-            <div class="weight ">
-                <table>
+            <div id="rs" class="rightside">
+                <table class="weight">
                     <tr>
                         <td>Наіменування</td>
                         <td>Крупа манна</td>
@@ -353,49 +328,82 @@
                         <td>30.00 грн.</td>
                     </tr>
                 </table>
-            </div>
+                <div class="calculator">
+                    <label for="input-number">Введіть код товару</label>
+                    <input type="text" class="btn_shape btn_calc" id="input-number" onfocus="hideKeyboard()" readonly>
+                    <div class="buttons">
+                        <table>
+                            <tr>
+                                <td>
+                                    <input class="btn_shape btn_calc btn_red" type="button" value="C" id="c">
+                                </td>
+                                <td>
+                                    <input class="btn_shape btn_calc" type="button" value="1">
+                                </td>
+                                <td>
+                                    <input class="btn_shape btn_calc" type="button" value="2">
+                                </td>
+                                <td>
+                                    <input class="btn_shape btn_calc" type="button" value="3">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">
+                                    <input type="checkbox" id="discount_perc" value="true" name="discount_buttons">
+                                    <label class="btn_shape btn_calc" for="discount_perc">
+                                        <p>%</p>Знижка</label>
+                                </td>
+                                <td>
+                                    <input class="btn_shape btn_calc" type="button" value="4">
+                                </td>
+                                <td>
+                                    <input class="btn_shape btn_calc" type="button" value="5">
+                                </td>
+                                <td>
+                                    <input class="btn_shape btn_calc" type="button" value="6">
+                                </td>
+                            </tr>
+                            <tr>
 
-            <div class="calculator ">
-                <form name="input" method="post" action="# ">
-                    <label for="input-number ">Введіть код товару</label>
-                    <input type="text" id="input-number">
-                    <div class="buttons ">
-                        <input class="button-normal" type="button" value="C">
-                        <input class="button-normal button-number" type="button" value="1">
-                        <input class="button-normal button-number" type="button" value="2">
-                        <input class="button-normal button-number" type="button" value="3">
-                        <input class="button-tall" type="checkbox" id="discount_perc" value="true" name="discount_buttons">
-                        <label for="discount_perc">
-                            <p>%</p>Знижка</label>
-                        <input class="button-normal button-number" type="button" value="4">
-                        <input class="button-normal button-number" type="button" value="5">
-                        <input class="button-normal button-number" type="button" value="6">
+                                <td>
+                                    <input class="btn_shape btn_calc" type="button" value="7">
+                                </td>
+                                <td>
+                                    <input class="btn_shape btn_calc" type="button" value="8">
+                                </td>
+                                <td>
+                                    <input class="btn_shape btn_calc" type="button" value="9">
+                                </td>
 
+                            </tr>
+                            <tr>
+                                <td rowspan="2">
+                                    <input type="checkbox" id="discount_grn" value="false" name="discount_buttons">
+                                    <label class="btn_shape btn_calc" for="discount_grn">
+                                        <p>ГРН</p>Знижка</label>
+                                </td>
+                                <td>
+                                    <input class="btn_shape btn_calc" type="button" value="0">
+                                </td>
+                                <td>
+                                    <input class="btn_shape btn_calc" type="button" value=".">
+                                </td>
+                                <td>
+                                    <input class="btn_shape btn_calc btn_icons" type="button" value="o">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="3">
+                                    <input class="btn_shape btn_wide btn_calc btn_icons" type="button" value="h" id="ok">
 
-                        <input class="button-normal button-number" type="button" value="7">
-                        <input class="button-normal button-number" type="button" value="8">
-                        <input class="button-normal button-number" type="button" value="9">
-
-
-                        <input class="button-tall" type="checkbox" id="discount_grn" value="false" name="discount_buttons">
-                        <label for="discount_grn">
-                            <p>ГРН</p>Знижка</label>
-                        <input class="button-normal button-number" type="button" value="0">
-                        <input class="button-normal" type="button" value=".">
-                        <input class="button-normal" type="button" value="o">
-
-                        <input class="button-wide" type="button" value="h">
-
+                                </td>
+                            </tr>
+                        </table>
                     </div>
-
-
-                </form>
+                </div>
             </div>
         </div>
-
-
     </div>
-
 
 </body>
 

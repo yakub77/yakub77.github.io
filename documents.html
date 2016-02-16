@@ -42,27 +42,36 @@
 
         <div class="wrapper">
             <div class="sidebar">
-                <ul class="menu">
-                    <li><a href="index.html"><span>c</span>Поточний чек</a></li>
-                    <li>
-                        <a href="work_with_check.html"><span>e</span>Робота з чеком</a></a>
-                    </li>
-                    <li><a href="documents.html" class="active"><span>d</span>Документи</a></li>
-                    <li><a href="cassa.html"><span>a</span>Каса</a></li>
-                    <li><a href="admin.html"><span>c</span>Службові</a></li>
-                    <li><a href="#"><span>b</span>Звіти</a></li>
-                </ul>
+                <div class="menu">
+                    <button class="menu_btn" onclick="location.href='index.html' "><span>c</span>
+                        <br>Поточний чек</button>
+                    <button class="menu_btn" onclick="location.href='work_with_check.html' "><span>e</span>
+                        <br>Робота з чеком</button>
+                    <div class="active">
+                        <button class="menu_btn" onclick="location.href='documents.html' "><span>d</span>
+                            <br>Документи</button>
+                    </div>
+                    <button class="menu_btn" onclick="location.href='cassa.html' "><span>a</span>
+                        <br>Каса</button>
+                    <button class="menu_btn" onclick="location.href='admin.html' "><span>c</span>
+                        <br>Службові
+                    </button>
+                    <button class="menu_btn" onclick="location.href='#' "><span>b</span>
+                        <br>Звіти</button>
+                </div>
                 <div class="substrate"></div>
             </div>
-            <div class="category">
-                <button>Прихідна накладна</button>
-                <button>Витратна накладна</button>
-                <button>Замовлення товару</button>
-                <button>Інвентаризаційна
-                    <br>відомість</button>
+            <div class="main">
+                <div class="category">
+                    <button class="btn_shape" class="btn_shape">Прихідна накладна</button>
+                    <button class="btn_shape">Витратна накладна</button>
+                    <button class="btn_shape">Замовлення товару</button>
+                    <button class="btn_shape">Інвентаризаційна
+                        <br>відомість</button>
 
+                </div>
             </div>
-
+        </div>
 
     </body>
 
